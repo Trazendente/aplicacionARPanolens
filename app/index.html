@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-Diners</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <script src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@v0.105.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@v0.105.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
+    <script src="./js/panolens.min.js"></script>
+   
+    <script type="module" src="js/world-tracking.js"></script>
+   <script src="./js/main.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="container"></div>
+        <a-scene>
+            <a-plane id="tracked" position="0 0 0" scale="0 0 0" opacity="0.1">
+                <a-entity gltf-model="https://cdn.glitch.global/d8719b18-7577-42e7-a783-b40a6a537ffa/mascota_v89_idle%20(1).glb?v=1705418657654"></a-entity>
+            </a-plane>
+        </a-scene>
+
+        <div class="tour">
+            <div class="tour__head">
+              
+                <img src="https://cdn.glitch.global/67ab0bf3-4565-4426-9f58-a2ca9a65c7d3/Sphaera-100.jpg?v=1704807175804" alt="Beneficios de tu tarjeta Sphaera Reserve">
+            </div>
+            <div class="image-container"></div>
+            <div id="IniciaAQUIContainer">
+                <button id="IniciaAQUI">Inicia aquí</button>
+                <button id="backButton" style="display: none;">Volver a Inicio</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
